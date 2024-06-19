@@ -1,3 +1,7 @@
+
+# INFINITY CHAT APP
+
+
 # EMOJI IS ALSO INVOLVED IN IT
 
 ![Screenshot (116)](https://github.com/Aishwarya2004Github/INFINITY/assets/160381307/e94ac750-7b83-48a4-96b7-b051bdc3c6c0)
@@ -13,4 +17,8 @@
 ![Screenshot (113)](https://github.com/Aishwarya2004Github/INFINITY/assets/160381307/46cd0340-87b9-4962-9eab-e34bbfdaa700)
 # login
 ![Screenshot (112)](https://github.com/Aishwarya2004Github/INFINITY/assets/160381307/161cc0b2-8d0b-47d2-8f7a-f055019b4621)
+
+# DEMO OF INFINITY CHAT APP
+
+https://github.com/Aishwarya2004Github/INFINITY/assets/160381307/aca806db-e348-4b44-8478-fcc40112d59c
 
