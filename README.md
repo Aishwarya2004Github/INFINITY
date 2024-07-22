@@ -3,6 +3,7 @@
 ![Screenshot (116)](https://github.com/user-attachments/assets/9c3482d9-88b5-46aa-9631-cffd7d7c265f)
 
 # main page
+(updated)
 ![Screenshot (158)](https://github.com/user-attachments/assets/79804266-7b23-468e-b9eb-2fe72e6221a3)
 
 
