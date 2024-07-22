@@ -19,6 +19,8 @@ export default function Login() {
   };
   
   useEffect(() => {
+    localStorage.clear();
+
     if (localStorage.getItem(process.env.REACT_APP_LOCALHOST_KEY)) {
       navigate("/");
     }
@@ -111,7 +113,7 @@ const FormContainer = styled.div`
   justify-content: center;
   gap: 1rem;
   align-items: center;
-  background-color:  #FFC1CC;
+background-image: linear-gradient(45deg, #FF6F91, #FF9671, #FFC75F, #F9F871);
 
   .brand {
     display: flex;
@@ -138,7 +140,7 @@ const FormContainer = styled.div`
   input {
     background-color: transparent;
     padding: 1rem;
-    border: 0.1rem solid #4e0eff;
+    border: 0.1rem solid #F46289;
     border-radius: 0.4rem;
     color: white;
     width: 100%;
@@ -153,7 +155,7 @@ const FormContainer = styled.div`
     color: black;
   }
   button {
-    background-color: #4e0eff;
+    background-color: #FF0F4F;
     color: white;
     padding: 1rem 2rem;
     border: none;
@@ -163,7 +165,7 @@ const FormContainer = styled.div`
     font-size: 1rem;
     text-transform: uppercase;
     &:hover {
-      background-color: #4e0eff;
+      background-color: #F2124E ;
     }
   }
   span {

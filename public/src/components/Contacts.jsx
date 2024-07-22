@@ -25,7 +25,7 @@ export default function Contacts({ contacts, changeChat }) {
 
   return (
     <>
-      {currentUserImage && currentUserImage && (
+      {currentUserImage && currentUserName && (
         <Container>
           <div className="brand">
             <img src={Logo} alt="logo" />
@@ -49,6 +49,12 @@ export default function Contacts({ contacts, changeChat }) {
                 <div className="username">
                   <h3>{contact.username}</h3>
                 </div>
+                {/* Display unread message count */}
+                {contact.unreadCount > 0 && (
+                  <div className="unread-count">
+                    {contact.unreadCount}
+                  </div>
+                )}
               </div>
             ))}
           </div>
@@ -88,13 +94,14 @@ const Container = styled.div`
       text-transform: uppercase;
     }
   }
+
   .contacts {
     display: flex;
     flex-direction: column;
     align-items: center;
     overflow: auto;
     gap: 0.8rem;
-    box-shadow:2px solid black;
+    box-shadow: 2px solid black;
     &::-webkit-scrollbar {
       width: 0.2rem;
       &-thumb {
@@ -111,8 +118,9 @@ const Container = styled.div`
       border-radius: 0.2rem;
       padding: 0.4rem;
       display: flex;
-      gap: 1rem;
       align-items: center;
+      gap: 1rem;
+      position: relative; /* Added to position the unread count */
       transition: 0.5s ease-in-out;
       .avatar {
         img {
@@ -123,6 +131,20 @@ const Container = styled.div`
         h3 {
           color: white;
         }
+      }
+      .unread-count {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: #FF0F4F;
+        color: white;
+        border-radius: 50%;
+        width: 1.5rem;
+        height: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.8rem;
       }
     }
     .selected {

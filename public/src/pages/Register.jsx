@@ -21,6 +21,7 @@ export default function Register() {
     email: "",
     password: "",
     confirmPassword: "",
+    location: "", // New field for location
   });
 
   useEffect(() => {
@@ -34,10 +35,10 @@ export default function Register() {
   };
 
   const handleValidation = () => {
-    const { password, confirmPassword, username, email } = values;
+    const { password, confirmPassword, username, email, location } = values;
     if (password !== confirmPassword) {
       toast.error(
-        "Password and confirm password should be same.",
+        "Password and confirm password should be the same.",
         toastOptions
       );
       return false;
@@ -49,12 +50,15 @@ export default function Register() {
       return false;
     } else if (password.length < 8) {
       toast.error(
-        "Password should be equal or greater than 8 characters.",
+        "Password should be equal to or greater than 8 characters.",
         toastOptions
       );
       return false;
     } else if (email === "") {
       toast.error("Email is required.", toastOptions);
+      return false;
+    } else if (location === "") {
+      toast.error("Location is required.", toastOptions);
       return false;
     }
 
@@ -64,11 +68,12 @@ export default function Register() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     if (handleValidation()) {
-      const { email, username, password } = values;
+      const { email, username, password, location } = values;
       const { data } = await axios.post(registerRoute, {
         username,
         email,
         password,
+        location, // Include location in the request
       });
 
       if (data.status === false) {
@@ -117,6 +122,12 @@ export default function Register() {
             name="confirmPassword"
             onChange={(e) => handleChange(e)}
           />
+          <input
+            type="text"
+            placeholder="Location"
+            name="location"
+            onChange={(e) => handleChange(e)}
+          />
           <button type="submit">Create User</button>
           <span>
             Already have an account ? <Link to="/login">Login.</Link>
@@ -148,7 +159,7 @@ const FormContainer = styled.div`
   justify-content: center;
   gap: 1rem;
   align-items: center;
-  background-color:  #FFC1CC;
+  background-image: linear-gradient(45deg, #FF6F91, #FF9671, #FFC75F, #F9F871);
   .brand {
     display: flex;
     align-items: center;
@@ -176,7 +187,7 @@ const FormContainer = styled.div`
   input {
     background-color: transparent;
     padding: 1rem;
-    border: 0.1rem solid #4e0eff;
+    border: 0.1rem solid #F46289;
     border-radius: 0.4rem;
     color: white;
     width: 100%;
@@ -187,7 +198,7 @@ const FormContainer = styled.div`
     }
   }
   button {
-    background-color: #4e0eff;
+    background-color:  #FF0F4F;
     color: white;
     padding: 1rem 2rem;
     border: none;
@@ -197,7 +208,7 @@ const FormContainer = styled.div`
     font-size: 1rem;
     text-transform: uppercase;
     &:hover {
-      background-color: #4e0eff;
+      background-color:  #F2124E;
     }
   }
   span {
