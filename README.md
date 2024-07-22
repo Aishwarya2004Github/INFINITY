@@ -3,9 +3,11 @@
 ![Screenshot (116)](https://github.com/user-attachments/assets/9c3482d9-88b5-46aa-9631-cffd7d7c265f)
 
 # main page
-![Screenshot (114)](https://github.com/user-attachments/assets/db24cbe2-09f4-488d-a2ab-c351bfc2f198)
+![Screenshot (158)](https://github.com/user-attachments/assets/79804266-7b23-468e-b9eb-2fe72e6221a3)
+
 
 # CHAT
+![Screenshot (114)](https://github.com/user-attachments/assets/db24cbe2-09f4-488d-a2ab-c351bfc2f198)
 ![Screenshot (115)](https://github.com/user-attachments/assets/5d0ff0cc-d3e4-47fd-88d7-7a5906e9c187)
 
 # Register
