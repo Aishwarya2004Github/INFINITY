@@ -36,7 +36,11 @@ IT HAS TOASTIFY FOR SHOWING INCORRECT ENTRIES . CHATTING WITH FRIENDS CAN HAPPEN
 # NEW FEATURES ADDED DEMO
 
 
-https://github.com/user-attachments/assets/a54cf0e8-eca4-4337-a60b-93825d0a219b
+
+
+https://github.com/user-attachments/assets/0cf355da-5bf3-4b2b-9aba-a4c48b22c602
+
+
 1. user profile
 2. reciever profile
 3. settings
