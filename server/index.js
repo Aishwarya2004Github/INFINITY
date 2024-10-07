@@ -7,6 +7,7 @@ const dotenv = require("dotenv");
 const http = require("http");
 const socketIO = require("socket.io");
 const multer = require('multer');
+const path = require("path");
 
 dotenv.config();
 
@@ -166,6 +167,12 @@ io.on('connection', (socket) => {
     // Broadcast offline status to other clients
     socket.broadcast.emit('user-online-status', { userId: socket.id, online: false });
   });
+});
+
+app.use(express.static(path.join(__dirname, "public", "build")));
+
+app.get("*", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "public", "build", "index.html"));
 });
 
 // Start the server
