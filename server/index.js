@@ -14,7 +14,7 @@ dotenv.config();
 const app = express();
 
 
-app.use(cors({ origin: 'http://localhost:5000', credentials: true }));
+app.use(cors({ origin: 'https://infinity-1yed.onrender.com', credentials: true }));
 app.use(express.json());
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
@@ -39,17 +39,12 @@ app.post('/send-audio', upload.single('audio'), (req, res) => {
     res.status(400).send('Error uploading file.');
   }
 });
-mongoose
-  .connect(process.env.MONGO_URL, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
-  .then(() => {
-    console.log("DB Connection Successful");
-  })
-  .catch((err) => {
-    console.log(err.message);
-  });
+const mongoose = require('mongoose');
+
+mongoose.connect(process.env.MONGO_URL)
+  .then(() => console.log("DB Connection Successful"))
+  .catch((err) => console.error("DB Connection Error: ", err));
+
 
 app.get("/ping", (_req, res) => {
   return res.json({ msg: "Ping Successful" });
@@ -64,7 +59,7 @@ const server = http.createServer(app);
 // Initialize Socket.IO with the HTTP server
 const io = socketIO(server, {
   cors: {
-    origin: "http://localhost:5000",
+    origin: "https://infinity-1yed.onrender.com",
     credentials: true,
   },
 });
