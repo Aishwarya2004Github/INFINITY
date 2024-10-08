@@ -14,7 +14,7 @@ dotenv.config();
 const app = express();
 
 
-app.use(cors({ origin: 'https://infinity-1yed.onrender.com', credentials: true }));
+app.use(cors({ origin: 'http://localhost:5000', credentials: true }));
 app.use(express.json());
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
@@ -64,7 +64,7 @@ const server = http.createServer(app);
 // Initialize Socket.IO with the HTTP server
 const io = socketIO(server, {
   cors: {
-    origin: "https://infinity-1yed.onrender.com",
+    origin: "http://localhost:5000",
     credentials: true,
   },
 });
