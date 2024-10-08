@@ -39,7 +39,7 @@ export default function ChatInput({ handleSendMsg }) {
       formData.append('audio', audioBlob, 'audio.webm');
 
       try {
-        const response = await axios.post('http://localhost:5000/send-audio', formData, {
+        const response = await axios.post('https://infinity-1yed.onrender.com/send-audio', formData, {
           headers: {
             'Content-Type': 'multipart/form-data',
           },
