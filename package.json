@@ -3,13 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-  "test": "echo \"Error: no test specified\" && exit 1",
-  "start": "nodemon server/index.js", 
-  "build": "npm install && npm install --prefix public && npm run build --prefix public",
-  "server": "nodemon server/index.js",
-  "public": "npm start --prefix public",
-  "dev": "concurrently \"npm run public\" \"npm run server\""
-},
+    "dev": "nodemon server/index.js",
+    "build": "npm install && npm install --prefix public && npm run build --prefix public ",
+    "start": "nodemon server/index.js"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -18,7 +15,7 @@
     "bcrypt": "^5.1.1",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
-    "express": "^4.19.2",
+    "express": "^4.21.0",
     "firebase": "^10.13.0",
     "mongoose": "^8.4.0",
     "multer": "^1.4.5-lts.1",

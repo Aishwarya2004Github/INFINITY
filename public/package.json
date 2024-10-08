@@ -13,6 +13,7 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.7.2",
     "buffer": "^6.0.3",
+    "c": "file:..",
     "date-fns": "^3.6.0",
     "emoji-picker-react": "^4.9.3",
     "firebase": "^10.13.0",
