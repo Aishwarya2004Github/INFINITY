@@ -39,8 +39,11 @@ app.post('/send-audio', upload.single('audio'), (req, res) => {
     res.status(400).send('Error uploading file.');
   }
 });
-mongoose.connect(MONGO_URL)
-
+mongoose
+  .connect(process.env.MONGO_URL, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
   .then(() => {
     console.log("DB Connection Successful");
   })
